@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Programa</title>
+    <title>Estudos DOM</title>
     <style>
         body { /* Comentário em CSS */
-            background-color: #030596;
+            background-color: #719603;
             color: #fff;
             font: normal 16pt Arial;
         }
@@ -21,11 +21,29 @@
 </head>
 <body>
     <h1>Início de DOMS</h1> <!-- comentário em HTML -->
-    
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id = 'msg'>Clique em mim!</div>
+    <br>
+
     <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim:' + '<br>' + p1.innerText + '<br>')
         
-        
-        
+        p1.style.color = 'red'
+        corpo.style.background = 'black'
+
+        window.document.write(p1.innerHTML)
+
+        var msg = window.document.getElementById('msg')
+        msg.style.background = 'green'
+        msg.innerText = 'Aguardando...'
+
+
+        var teste = window.document.querySelector('div#msg')
+        teste.style.background = 'blue'
+
 
     </script>
 </body>
