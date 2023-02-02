@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificar Nacionalidade</h1>
+    Qual o seu nome? <input type="text" name="txtnome" id="txtnome">
+    Qual a sua Nacionalidade? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        var txtn = window.document.getElementById('txtnome')
+        var txtna = window.document.getElementById('txtnac')
+        var res = window.document.getElementById('res')
+
+        function verificar(){
+            var nome = txtn.value
+            var nac = txtna.value
+            res.innerHTML = `<p>Seu nome é <strong>${nome}</strong> e você é <strong>${nac}</strong></p>`
+            if (nac == 'brasileiro'){
+                res.innerHTML += `<p>Pegue a fila de cidadãos!</p>`
+            } else {
+                res.innerHTML += `<p>Pegue a fila de estrangeiros!</p>`
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
